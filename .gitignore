@@ -1,0 +1,37 @@
+# Environment files
+.env
+.env.*.local
+
+# Elixir / Phoenix
+/_build/
+/deps/
+/erl_crash.dump
+/priv/static/_cache/
+
+# Node / React
+/frontend/node_modules/
+/frontend/build/
+
+# Docker
+docker-compose.override.yml
+docker-compose.*.yml
+**/*.env
+
+# IDEs and editors
+.vscode/
+.idea/
+.DS_Store
+
+# Logs
+/log/
+*.log
+
+# Misc
+*.swp
+*~ 
+# features
+/Neotalent - Software Engineer - Coding Exercise.pdf
+/install.sh
+/logs.log
+/erl_crash.dump
+/command.txt
