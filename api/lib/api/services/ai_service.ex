@@ -9,8 +9,9 @@ defmodule Api.Services.AIService do
   # Базовый URL для Hugging Face Inference API (corrected)
   @hf_api_url "https://api-inference.huggingface.co/models"
 
-  # API ключ для Hugging Face
-  @hf_api_key "***REMOVED***"
+  # API ключ для Hugging Face (читаем из окружения)
+  @hf_api_key System.get_env("HUGGING_FACE_API_KEY") ||
+    raise("environment variable HUGGING_FACE_API_KEY is missing")
 
   # Модели для перевода специфичных языковых пар
   @translation_models %{

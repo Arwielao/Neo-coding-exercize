@@ -13,7 +13,10 @@ services:
       - '5432:5432'
 
   api:
-    build: ./api
+    build:
+      context: ./api
+      args:
+        HUGGING_FACE_API_KEY: "${HUGGING_FACE_API_KEY}"
     image: myapp-api
     env_file: .env
     depends_on:

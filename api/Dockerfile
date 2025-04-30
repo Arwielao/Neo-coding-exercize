@@ -1,5 +1,8 @@
 # Stage 1: compile release
 FROM elixir:1.14.3 AS builder
+# Принимаем токен Hugging Face на этапе сборки
+ARG HUGGING_FACE_API_KEY
+ENV HUGGING_FACE_API_KEY=${HUGGING_FACE_API_KEY}
 WORKDIR /app
 
 # Устанавливаем системные зависимости и hex & rebar
